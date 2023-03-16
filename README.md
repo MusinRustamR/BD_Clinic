@@ -24,7 +24,7 @@
      _CREATE INDEX date_idx on Appointment(Date);_\
  
  Таблица "Appointment" - составной индекс по столбцам "ClientId" и "EmployeeId" позволит оперативнее выполнить поиск данных по приему с условием определенного сотрудника и пациента.\
-     _CREATE INDEX Client_Employee_Id_idx on Appointment(ClientId,EmployeeId);_
+     _CREATE INDEX client_employee_id_idx on Appointment(ClientId,EmployeeId);_
  
  Таблица "Client" - составной индекс по столбцам "LastName" и "FirstName" т.к. фамилия имеет большую кардинальность. Обеспечит производительность поиска пациентов.\
     _CRATE INDEX last_first_name_idx on Client(LastName,FirstName)_

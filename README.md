@@ -22,6 +22,7 @@
  
  Таблица "Appointment" - индекс по столбцу "Date" позволит оперативнее собирать данные по пациентам в промежутке времени.\
      _CREATE INDEX date_idx on Appointment(Date);_\
+ 
  Таблица "Appointment" - составной индекс по столбцам "ClientId" и "EmployeeId" позволит оперативнее выполнить поиск данных по приему с условием определенного сотрудника и пациента.\
      _CREATE INDEX Client_Employee_Id_idx on Appointment(ClientId,EmployeeId);_
  

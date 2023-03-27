@@ -80,3 +80,6 @@
           (8 rows)
 
           demo=#
+
+Подключимся к базе с помощью десктопного pgAdmin
+<image src="/images/pgAdmin.png" >

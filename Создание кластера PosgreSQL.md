@@ -1,4 +1,4 @@
-## Создал виртуальную машину на YandexCloud, развернул кластер postgresql. Подключимся к ВМ:
+#### Создал виртуальную машину на YandexCloud, развернул кластер postgresql. Подключимся к ВМ:
                Windows PowerShell
               (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
 
@@ -51,7 +51,7 @@
               mrr-user@vm-db-pg:~$
 
 
-# Запустим клиента psql и подключимся к загруженной ране демо базе данных.
+#### Запустим клиента psql и подключимся к загруженной ране демо базе данных.
 
           mrr-user@vm-db-pg:~$ psql -h localhost -U postgres
           Password for user postgres:
@@ -80,5 +80,5 @@
 
           demo=#
 
-# Подключимся к базе с помощью десктопного pgAdmin
-<image src="BD_Clinic/images/pgAdmin.png">
+#### Подключимся к базе с помощью десктопного pgAdmin
+<image src="/images/pgAdmin.png">

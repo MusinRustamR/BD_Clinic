@@ -12,7 +12,7 @@ FROM client_data.client where "firstname" like 'Алек%'*
 FROM client_data.client where "birthdate"::text like '1980-%'*
 
       
-2.Напишите запрос по своей базе с использованием LEFT JOIN и INNER JOIN, как порядок соединений в FROM влияет на результат? Почему?
+2.Напишите запрос по своей базе с использованием LEFT JOIN и INNER JOIN, как порядок соединений в FROM влияет на результат? Почему?\
 Выполним запрос с использованием inner join для связки данных по сотрудникам и их врачебным специальностям
 
 ![image](https://user-images.githubusercontent.com/126672650/236309330-4810d913-9a2d-4e3f-99f7-dbadd1156a94.png)

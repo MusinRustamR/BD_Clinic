@@ -32,7 +32,7 @@ FROM client_data.client where "birthdate"::text like '1980-%'*
 
 3.Напишите запрос на добавление данных с выводом информации о добавленных строках.\
 Добавим в таблицу клиентов (client_data.client) одного из сотрудников (employee_data.employee) с максимальным id и выведем информацию о добавляемой записи.\
-![image](https://user-images.githubusercontent.com/126672650/236643780-00360d76-6515-474f-b2b0-0ad61d497d5c.png)
+![image](https://user-images.githubusercontent.com/126672650/236643965-b3613968-1d58-4174-885d-498ebc810686.png)
 
 4.Напишите запрос с обновлением данные используя UPDATE FROM.
 

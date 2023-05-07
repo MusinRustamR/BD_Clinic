@@ -43,5 +43,8 @@ FROM client_data.client where "birthdate"::text like '1980-%'*
 ![image](https://user-images.githubusercontent.com/126672650/236665672-66557464-a78d-43d6-bf11-fff71cd8d8e3.png)
 
 
-
 5.Напишите запрос для удаления данных с оператором DELETE используя join с другой таблицей с помощью using.
+
+Удалим из созданой в задании 4 таблицы специальности без привзяки сотрудников.\
+![image](https://user-images.githubusercontent.com/126672650/236672362-41665be7-38b8-45fa-9173-ff493a2d3044.png)
+

@@ -36,4 +36,12 @@ FROM client_data.client where "birthdate"::text like '1980-%'*
 
 4.Напишите запрос с обновлением данные используя UPDATE FROM.
 
+Создадим таблицу с информацией по специальностям, количеству специалистов и их ФИО.\
+![image](https://user-images.githubusercontent.com/126672650/236665618-3d050ddc-9a38-482a-ae26-45409ea19905.png)
+
+Результат\
+![image](https://user-images.githubusercontent.com/126672650/236665672-66557464-a78d-43d6-bf11-fff71cd8d8e3.png)
+
+
+
 5.Напишите запрос для удаления данных с оператором DELETE используя join с другой таблицей с помощью using.

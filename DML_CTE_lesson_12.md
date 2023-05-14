@@ -1,3 +1,5 @@
+*DML: агрегация и сортировка, CTE, аналитические функции*
+
 Создадим таблицу согласно дз
 
 ![image](https://github.com/MusinRustamR/BD_Clinic/assets/126672650/19c793c2-06b2-46be-bd10-6446edbbeacc)
@@ -8,7 +10,7 @@
 
 2)Написать cte показывающее тоже самое
 
-![image](https://github.com/MusinRustamR/BD_Clinic/assets/126672650/1a5a5dba-4c09-4813-b08a-56beef4c2263)
+![image](https://github.com/MusinRustamR/BD_Clinic/assets/126672650/3543d03a-d5f9-4236-b687-8624f4b3ae6a)
 
 3)Используя функцию LAG вывести кол-во очков по всем игрокам за текущий год и за предыдущий.
 Выполним запрос за 2019 год. Получаем очки за текущий и предыдущий год у всех, кроме Luke - null pf 2018 год.

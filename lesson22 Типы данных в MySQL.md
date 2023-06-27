@@ -143,3 +143,6 @@ CREATE TABLE IF NOT EXISTS medclinic.employee_speciality_count
     FOREIGN KEY (speciality_id)  REFERENCES speciality (id) ON DELETE RESTRICT ON UPDATE RESTRICT
 );
 ```
+Для типа данных JSON создадим таблицу с данными по лабораторным исследованиям. Ввиду того, что результаты исследований могут быть числовым показателем различного порядка, либо булевым типом и т.д., применение типа JSON кажется оправданным. 
+```
+

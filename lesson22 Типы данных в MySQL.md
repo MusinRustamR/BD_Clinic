@@ -1,4 +1,5 @@
 Перенесем проект из БД Postgre в MySQL. При написании DDL были добавлены ограничения not null. Типы данных приведены в соответствие с типами MySQL.
+*****
 CREATE TABLE IF NOT EXISTS medclinic.district
 (
     id INT PRIMARY KEY AUTO_INCREMENT,

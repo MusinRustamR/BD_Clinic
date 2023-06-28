@@ -145,4 +145,28 @@ CREATE TABLE IF NOT EXISTS medclinic.employee_speciality_count
 ```
 Для типа данных JSON создадим таблицу с данными по лабораторным исследованиям. Ввиду того, что результаты исследований могут быть числовым показателем различного порядка, либо булевым типом и т.д., применение типа JSON кажется оправданным. 
 ```
+CREATE TABLE IF NOT EXISTS medclinic.analysis_result
+(
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    client_Id integer NOT NULL,
+    treatment_id integer NOT NULL,
+    date timestamp NOT NULL,
+    result json,
+    FOREIGN KEY (client_Id)  REFERENCES client (id) ON DELETE RESTRICT ON UPDATE RESTRICT,
+	FOREIGN KEY (treatment_id)  REFERENCES treatment (id) ON DELETE RESTRICT ON UPDATE RESTRICT
+);
+```
+Заполним таблицу тестовыми данными по типу:
+```
+ INSERT INTO medclinic.analysis_result(client_Id,treatment_id,date,result)
+ VALUES(1,1,'2023-06-09 11:00:00','{"Показатель 1, мг/мл": "56*10^(-2)", "Показатель 2": "пол.","Показатель 3": "отриц."}');
+````
+![image](https://github.com/MusinRustamR/BD_Clinic/assets/126672650/b8ebc77c-7b27-4e3a-a894-81334755b569)
+
+И сделаем выборку ключу поля JSON:
+````
+SELECT * FROM medclinic.analysis_result where JSON_EXTRACT (result,'$."Показатель 2"') like '"%отр%"';
+````
+![image](https://github.com/MusinRustamR/BD_Clinic/assets/126672650/64818d9d-4e52-4d78-bba7-126c4653cc80)
+
 

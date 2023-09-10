@@ -12,7 +12,8 @@ order by emp.lastname
 ```
 ![image](https://github.com/MusinRustamR/BD_Clinic/assets/126672650/a561f7c6-a2f4-4af8-901c-8cee3467df91)
 
-2) Напишите запрос по своей базе с left join
+2) Напишите запрос по своей базе с left join.
+   
    Выполним left join к таблице "Клиенты". Часть полей "Дата" и "Диагноз" имеют null значения т.к. не у всех клиентов были записи к врачу и диагнозы.
 ```
 SELECT cl.lastname as 'Фамилия клиента',cl.firstname as'Имя клиента',cl.middlename as 'Отчество клиента',ap.date as 'Дата', dg.name as 'Диагноз' FROM medclinic.client cl

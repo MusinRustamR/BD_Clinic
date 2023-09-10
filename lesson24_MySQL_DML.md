@@ -61,7 +61,7 @@ where dg.name in ('Грипп','Воспаление легких') ;
 
 ![image](https://github.com/MusinRustamR/BD_Clinic/assets/126672650/c7665084-0a24-4f34-815f-8e8b29eaf7c9)
 
-Проследим динамику заболеваемости после определнной даты.
+Проследим динамику заболеваемости после определенной даты.
 ```
 SELECT count( dg.name) as 'Диагноз грипп, кол-во', date( ap.date) as 'Дата' 
 FROM  medclinic.appointment ap

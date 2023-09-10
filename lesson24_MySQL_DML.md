@@ -25,7 +25,7 @@ left join medclinic.diagnosis dg on dg.id=ap.diagnosis_id
 
 3) Напишите 5 запросов с WHERE с использованием разных операторов, опишите для чего вам в проекте нужна такая выборка данных
 
-   Сделаем выборку пациентов с  определенным диагнозом на опредленную дату.
+   Сделаем выборку пациентов с  определенным диагнозом на определенную дату.
 ```
 SELECT cl.lastname as 'Фамилия клиента',cl.firstname as'Имя клиента',cl.middlename as 'Отчество клиента', 
 emp.lastname as 'Фамилия врача',emp.firstname as 'Имя врача',ap.date as 'Дата', ap.comment as 'Комментарий', dg.name as 'Диагноз'
@@ -37,7 +37,7 @@ where dg.name='Грипп' and ap.date between '2023-04-05 00:00:00' and '2023-0
 ```
    ![image](https://github.com/MusinRustamR/BD_Clinic/assets/126672650/fd03038c-7698-48f7-8e27-75e920e3eec0)
 
-   Сделаем выборку пациентов с по диагнозу с помощью like
+   Сделаем выборку пациентов по схожим диагнозам с помощью like
 ```
 SELECT cl.lastname as 'Фамилия клиента',cl.firstname as'Имя клиента',cl.middlename as 'Отчество клиента', 
 emp.lastname as 'Фамилия врача',emp.firstname as 'Имя врача',ap.date as 'Дата', ap.comment as 'Комментарий', dg.name as 'Диагноз'
@@ -49,7 +49,7 @@ where dg.name like '%аллергия%' ;
 ```
 ![image](https://github.com/MusinRustamR/BD_Clinic/assets/126672650/8bf9e56b-d042-4e52-aa5e-0680ec666add)
 
-Сделаем выборку пациентов с по нескольким диагнозам с помощью оператора "in"
+Сделаем выборку пациентов по нескольким диагнозам с помощью оператора "in"
 ```
 SELECT cl.lastname as 'Фамилия клиента',cl.firstname as'Имя клиента',cl.middlename as 'Отчество клиента', 
 emp.lastname as 'Фамилия врача',emp.firstname as 'Имя врача',ap.date as 'Дата', ap.comment as 'Комментарий', dg.name as 'Диагноз'

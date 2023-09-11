@@ -2,3 +2,7 @@
 
 2)Загрузить данные из приложенных в материалах csv.
 
+Загрузим данные из Bicycles.csv
+![image](https://github.com/MusinRustamR/BD_Clinic/assets/126672650/9a59d1d3-f010-4663-85a1-e00c04995560)
+
+![image](https://github.com/MusinRustamR/BD_Clinic/assets/126672650/0b720d55-90ec-468a-a2c8-5af19303d4b4)

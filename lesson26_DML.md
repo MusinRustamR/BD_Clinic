@@ -1,5 +1,6 @@
-1)группировки с ипользованием CASE, HAVING, ROLLUP, GROUPING() 
+1)Группировки с ипользованием: CASE
 
+ROLLUP
 ```
 SELECT emp.lastname as doctor, count(ap.id) 
 FROM employee emp
@@ -8,6 +9,7 @@ group by doctor with rollup ;
 ```
 ![image](https://github.com/MusinRustamR/BD_Clinic/assets/126672650/c1a2dc87-eec3-47f6-8044-acdab65424ae)
 
+GROUPING()
 ```
 SELECT IF (Grouping(emp.lastname),'Общее количество приемов', emp.lastname ) as doctor, count(ap.id) 
 FROM employee emp
@@ -16,6 +18,8 @@ group by emp.lastname with rollup ;
 ```
 ![image](https://github.com/MusinRustamR/BD_Clinic/assets/126672650/cf2bb92e-be31-49b6-b034-2c0f1f2c5065)
 
+
+HAVING
 ```
 SELECT emp.lastname as doctor, count(ap.id) as appoint
 FROM employee emp

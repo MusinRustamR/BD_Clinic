@@ -56,4 +56,16 @@ end
 
 2)для магазина к предыдущему списку продуктов добавить максимальную и минимальную цену и кол-во предложений
 3)сделать выборку показывающую самый дорогой и самый дешевый товар в каждой категории
+
+with statistics as (
+SELECT row_number() over(), emp.lastname as doctor, count(ap.id) as appoint, sp.name as spec
+FROM employee emp
+left join  appointment ap on ap.employee_Id=emp.id
+left join  speciality sp on sp.id=emp.speciality_id
+group by doctor,spec order by spec,appoint
+)
+select max(appoint),   min(appoint), spec
+from statistics
+group by spec
+
 4)сделать rollup с количеством товаров по категориям

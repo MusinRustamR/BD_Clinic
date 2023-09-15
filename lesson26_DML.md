@@ -54,7 +54,26 @@ end
 ![image](https://github.com/MusinRustamR/BD_Clinic/assets/126672650/1b616feb-8bb8-4873-a00c-04eba9635f17)
 
 
-2)для магазина к предыдущему списку продуктов добавить максимальную и минимальную цену и кол-во предложений
+2)Определим минимальное и максимальное количество приемов среди всех специалистов
+```
+with statistics as (
+SELECT  emp.lastname as doctor, count(ap.id) as appoint, sp.name as spec, emp.id as idd
+FROM employee emp
+left join  appointment ap on ap.employee_Id=emp.id
+left join  speciality sp on sp.id=emp.speciality_id
+group by doctor,spec,idd  order by spec,appoint
+)
+
+select sc.appoint, sc.spec, sc.doctor
+from statistics sc
+where (sc.appoint)=any(select min(appoint) from statistics)
+union
+select sc.appoint, sc.spec, sc.doctor
+from statistics sc
+where (sc.appoint)=any(select max(appoint) from statistics )
+order by appoint asc
+```
+![image](https://github.com/MusinRustamR/BD_Clinic/assets/126672650/1c037e12-a8e5-4a4e-a0e4-62d198ea2a41)
 
 3)Cделаем выборку с минимальный и максимальным количеством приемов с группировкой по специальностям
 ```

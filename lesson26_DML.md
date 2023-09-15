@@ -80,8 +80,11 @@ order by spec,appoint asc
 
 4)Сделаем rollup с количеством приемов по специальностям
 ```
-![image](https://github.com/MusinRustamR/BD_Clinic/assets/126672650/4b0895e1-51cf-49a8-b9a5-9b97c4e8cf82)
-
+SELECT  emp.lastname as doctor, count(ap.id) as appoint, sp.name as spec
+FROM employee emp
+left join  appointment ap on ap.employee_Id=emp.id
+left join  speciality sp on sp.id=emp.speciality_id
+group by spec,doctor with rollup 
 ```
 ![image](https://github.com/MusinRustamR/BD_Clinic/assets/126672650/ad755bf9-654b-44ac-af2a-5d63664d2b57)
 

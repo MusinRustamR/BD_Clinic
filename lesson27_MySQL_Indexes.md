@@ -1,4 +1,4 @@
-Создадим полнотекстовый индекс для таблицы "Диагнозы" по полям "name" и "description" 
+Создадим полнотекстовый индекс для таблицы "diagnosis" по полям "name" и "description" 
 ```
 alter table diagnosis add fulltext index name_desc_idx (name,description)
 ```
@@ -9,3 +9,13 @@ alter table diagnosis add fulltext index name_desc_idx (name,description)
 ![image](https://github.com/MusinRustamR/BD_Clinic/assets/126672650/4a1d60c0-5e1c-4c0c-b302-d81c91249942)
 
 
+Добавим индекс для таблицы "client" по полям "lastname" и "firstname" сравним время выполнения запросов.
+```
+select * FROM medclinic.client where lastname ='Старшинов' and firstname='Эдуард';
+alter table client add index  lfn_idx (lastname,firstname);
+select * FROM medclinic.client where lastname ='Старшинов' and firstname='Эдуард';
+show profiles;
+```
+![image](https://github.com/MusinRustamR/BD_Clinic/assets/126672650/bc3d7815-9b9a-43ea-b486-e5c1c8997a7f)
+
+Время запроса уменьшилось ~ в 50 раз

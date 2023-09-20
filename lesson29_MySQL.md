@@ -12,7 +12,7 @@ left join speciality sp on es.speciality_id=sp.id
 left join diagnosis dg on ap.diagnosis_id= dg.id 
 where cl.lastname=lastname_client and sp.name like speciality_name and ap.isVHI=is_vhi and ap.date between date_from and date_to
 order by(case order_by_1doc_2diag_3date_appoint 
-				        when 1 then doctor_lastname
+		when 1 then doctor_lastname
                 when 2 then diagnos
                 when 3 then visit_date
                 else visit_date
@@ -45,7 +45,7 @@ left join employee_speciality es on emp.id=es.employee_id
 left join speciality sp on es.speciality_id=sp.id
 left join diagnosis dg on ap.diagnosis_id= dg.id 
 where (case rep_type_hour1_day2_week3 
-				when 1 then ap.date between start_date_time and date_add( start_date_time, interval 1 hour)
+		when 1 then ap.date between start_date_time and date_add( start_date_time, interval 1 hour)
                 when 2 then  ap.date between start_date_time and date_add( start_date_time, interval 1 day)
                 when 3 then  ap.date between start_date_time and date_add( start_date_time, interval 1 week)
                 else start_date_time and date_add( start_date_time, interval 1 day)

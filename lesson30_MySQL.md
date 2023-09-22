@@ -13,6 +13,8 @@ left join diagnosis dg on ap.diagnosis_id= dg.id
 where sp.name like 'терапевт' and cl.vhi_id=any (select id from vhi where insurer_name like 'reso')
 ```
 ![image](https://github.com/MusinRustamR/BD_Clinic/assets/126672650/6d336c51-0b4f-470f-a4ce-0c84307ad396)
+Для некоторых полей отсутсвуют индексы.
+
 
 В формате tree
 
